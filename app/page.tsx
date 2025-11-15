@@ -86,7 +86,6 @@ export default function Home() {
 
       setResponse(chatData.response);
 
-      // ⭐ Auto-speak immediately
       speak(chatData.response);
 
     } catch (err) {
@@ -101,7 +100,6 @@ export default function Home() {
     window.speechSynthesis.speak(utter);
   }
 
-  // ⭐ Added Stop Speaking button function
   function stopSpeaking() {
     window.speechSynthesis.cancel();
   }
@@ -136,14 +134,14 @@ export default function Home() {
 
         <div className="mt-8 space-y-6">
           <div>
-            <h3 className="text-xl font-semibold text-gray-800">📝 Transcript</h3>
+            <h3 className="text-xl font-semibold text-gray-800">Transcript</h3>
             <p className="mt-2 p-3 bg-gray-100 rounded-xl text-gray-700 min-h-[60px]">
               {transcript || "—"}
             </p>
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold text-gray-800">🤖 Bot Response</h3>
+            <h3 className="text-xl font-semibold text-gray-800">Bot Response</h3>
             <p className="mt-2 p-3 bg-gray-100 rounded-xl text-gray-700 min-h-[60px]">
               {response || "—"}
             </p>
